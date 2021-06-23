@@ -71,21 +71,25 @@
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(Platform)\testbed_$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)..\..\testbed\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(Platform)\testbed_$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)..\..\testbed\</OutDir>
+    <TargetName>$(ProjectName)d_$(Platform)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(Platform)\testbed_$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)..\..\testbed\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(Platform)\testbed_$(Configuration)\</IntDir>
     <OutDir>$(ProjectDir)..\..\testbed\</OutDir>
+    <TargetName>$(ProjectName)_$(Platform)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

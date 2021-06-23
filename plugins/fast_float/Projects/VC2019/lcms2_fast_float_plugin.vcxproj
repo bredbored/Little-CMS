@@ -51,6 +51,7 @@
     <ProjectGuid>{AD9FF79B-CF6E-4971-A7CF-DAA47D636676}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>fast</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -99,19 +100,23 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <IntDir>$(Platform)\fast_float_plugin_$(Configuration)\</IntDir>
     <OutDir>..\..\..\..\Lib\MS\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <IntDir>$(Platform)\fast_float_plugin_$(Configuration)\</IntDir>
     <OutDir>..\..\..\..\Lib\MS\</OutDir>
+    <TargetName>$(ProjectName)_$(Platform)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>$(Platform)\fast_float_plugin_$(Configuration)\</IntDir>
     <OutDir>..\..\..\..\Lib\MS\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(Platform)\fast_float_plugin_$(Configuration)\</IntDir>
     <OutDir>..\..\..\..\Lib\MS\</OutDir>
+    <TargetName>$(ProjectName)d_$(Platform)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
