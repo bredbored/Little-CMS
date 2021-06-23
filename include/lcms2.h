@@ -151,13 +151,6 @@ typedef double               cmsFloat64Number;
 #endif
 #endif
 
-// Handle "register" keyword
-#if defined(CMS_NO_REGISTER_KEYWORD) && !defined(CMS_DLL) && !defined(CMS_DLL_BUILD) 
-#  define CMSREGISTER
-#else
-#  define CMSREGISTER register
-#endif
-
 // In the case 64 bit numbers are not supported by the compiler
 #ifdef CMS_DONT_USE_INT64
     typedef cmsUInt32Number      cmsUInt64Number[2];
@@ -184,6 +177,13 @@ typedef int                  cmsBool;
 
 #ifdef __BORLANDC__
 #  define CMS_IS_WINDOWS_ 1
+#endif
+
+// Handle "register" keyword
+#if defined(CMS_NO_REGISTER_KEYWORD) && !defined(CMS_DLL) && !defined(CMS_DLL_BUILD) || defined(CMS_IS_WINDOWS_)
+#  define CMSREGISTER
+#else
+#  define CMSREGISTER register
 #endif
 
 // Try to detect big endian platforms. This list can be endless, so primarily rely on the configure script
